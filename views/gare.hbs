@@ -1,0 +1,8 @@
+<div>
+    <h1>Tutte le gare</h1>
+    <ul>
+        {{#each object}}
+            <li><a href="/gare/{{this.codice}}">{{this.nome}} - {{this.data}} - {{this.luogo}} - {{this.codice}} </a></li><br>
+        {{/each}}
+    </ul>
+</div>
