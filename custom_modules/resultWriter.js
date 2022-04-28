@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-function writeDown(){
-    fs.writeFile(path.relative(__dirname,'../result/result.txt'),"Hello world",function(err){
+function writeDown(object){
+    fs.writeFile('C:/Users/DanieleNovarese/Desktop/PROGETTO NODE/result/result.txt',`${object.nome} \n ${object.data} \n ${object.luogo} \n ${object.codice}`,function(err){
         if(err) return console.log(err);
     });
     console.log("saved file");

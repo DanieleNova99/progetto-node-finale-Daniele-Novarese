@@ -54,8 +54,7 @@ router.get('/:cod', function (req, res, next) {
     finalResult = finalResult.filter((item) => {
       return item.codice === cod;
     })
-    resultWriter();
-    res.render('gara', { gara: finalResult[0]});
+    res.render('gara', { gara: finalResult[0],function: resultWriter(finalResult[0])});
   })
 })
 
