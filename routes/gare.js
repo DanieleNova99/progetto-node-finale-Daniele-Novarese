@@ -3,6 +3,7 @@ var router = express.Router();
 var getter = require('../custom_modules/getGare');
 var gara_class = require('../custom_modules/gara_class');
 var checkValidGara = require('../custom_modules/checkValidGara');
+const { download } = require('express/lib/response');
 
 
 
@@ -57,6 +58,8 @@ router.get('/:cod', function (req, res, next) {
     var resultWriter = require('../custom_modules/resultWriter');
     // write down the file
     resultWriter(finalResult[0]);
+    var downloadVolantino = require('../custom_modules/downloadVolantino');
+    downloadVolantino(finalResult[0]); // mancano dati da inserire dentro il file, per ora salva solo con nome codice
     res.render('gara', { gara: finalResult[0], function: null});
   })
 })

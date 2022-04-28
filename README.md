@@ -7,4 +7,5 @@ La pagina index ha un semplice link che rimanda alla pagina gare, che carica dal
 Avvia l'applicazione in modalità di sviluppo.
 L'applicazione si apre su http://localhost, con port settata a 3000.
 
-Nella pagina gara singola, cliccando sul bottone vengono salvati sul file result.txt i dettagli della gara selezionata.
+Caricando la pagina di una gara singola, i relativi dati vengono salvati sul file result.txt.
+Premendo il pulsante scarica, viene creato un nuovo file .txt contenente tutti i dati relativi alla gara selezionata.
