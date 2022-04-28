@@ -10,3 +10,4 @@ function writeDown(object){
 
 module.exports = writeDown;
 // C:/Users/DanieleNovarese/Desktop/PROGETTO NODE/result/result.txt
+
