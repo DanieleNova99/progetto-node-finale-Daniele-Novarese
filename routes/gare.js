@@ -3,7 +3,6 @@ var router = express.Router();
 var getter = require('../custom_modules/getGare');
 var gara_class = require('../custom_modules/gara_class');
 var checkValidGara = require('../custom_modules/checkValidGara');
-var resultWriter = require('../custom_modules/resultWriter');
 
 
 
@@ -54,7 +53,11 @@ router.get('/:cod', function (req, res, next) {
     finalResult = finalResult.filter((item) => {
       return item.codice === cod;
     })
-    res.render('gara', { gara: finalResult[0],function: resultWriter(finalResult[0])});
+    
+    var resultWriter = require('../custom_modules/resultWriter');
+    // write down the file
+    resultWriter(finalResult[0]);
+    res.render('gara', { gara: finalResult[0], function: null});
   })
 })
 

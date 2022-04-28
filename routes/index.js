@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Lista Gare Trail' });
+  res.render('index', { title: 'WeDoSport Gare di Trail' });
 });
 
 module.exports = router;
